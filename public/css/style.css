@@ -3,3 +3,29 @@
     padding: 0;
     border: none;
 }
+
+body {
+    background: #193549;
+
+}
+
+
+.nav {
+    display: flex;
+    background: white;
+    /* border: 1px solid black; */
+    height: 50px;
+}
+
+.nav-1 {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501);
+
+}
+
+
+.nav-2 {
+    position: relative;
+    z-index: -1000;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501);
+
+}

@@ -19,7 +19,7 @@ module.exports = {
                 }
             })
 
-           console.log(competitons)
+           console.log(competitons.data.competitions[0])
                      
         
             res.render("index.ejs")
