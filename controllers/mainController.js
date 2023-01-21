@@ -26,6 +26,16 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+      }, 
+      getAllLeagues : async (req, res) => {
+        try{
+
+
+            res.render("allLeagues.ejs")
+
+        }catch(err){
+            console.log(err)
+        }
       }
 
 

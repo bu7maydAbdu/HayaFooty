@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee+Spice&family=Faster+One&family=Kaushan+Script&family=Libre+Barcode+39+Text&family=Lobster&family=Merienda:wght@400;500;600;700&family=Mitr:wght@400;600;700&family=Modak&family=Montserrat+Subrayada:wght@700&family=Mulish:wght@400;700&family=Nabla&family=Parisienne&family=Passion+One&family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Press+Start+2P&family=Prosto+One&family=Righteous&family=Roboto&family=Russo+One&family=Source+Code+Pro:wght@500;700&display=swap');
-*, *::before , *::after {
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bungee+Spice&family=Faster+One&family=Fredoka+One&family=Kaushan+Script&family=Libre+Barcode+39+Text&family=Lobster&family=Merienda:wght@400;500;600;700&family=Mitr:wght@400;600;700&family=Modak&family=Montserrat+Subrayada:wght@700&family=Mulish:wght@400;700&family=Nabla&family=Parisienne&family=Passion+One&family=Poppins:ital,wght@0,400;0,500;0,700;1,700&family=Press+Start+2P&family=Prosto+One&family=Righteous&family=Roboto&family=Russo+One&family=Source+Code+Pro:wght@500;700&display=swap');*, *::before , *::after {
     margin:  0;
     padding: 0;
     border: none;
@@ -11,6 +10,9 @@ body {
 
 
 }
+a{
+    text-decoration: none;
+}
 
 
 .nav {
@@ -19,11 +21,34 @@ body {
     /* border: 1px solid black; */
     height: 50px;
 }
+h1 {
+    /* color: #193549; */
+    color: rgb(255, 98, 0) ;
+    font-family: 'Fredoka One', cursive;
+}
+
 
 .nav-1 {
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 2px 3px rgb(255, 98, 0);
     height: 80px;
+    
+}
 
+.nav-1 ul {
+    display: flex;
+}
+
+.nav-1 a {
+    background: #193549;
+    /* color: rgb(255, 98, 0) ; */
+    color: white;
+    padding: 5px 20px;
+    border-radius: 16px;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 
@@ -48,13 +73,24 @@ main {
     background-color: white;
     margin: 50px;
     border-radius: 16px;
+    box-shadow: 0px 10px 3px rgb(255, 98, 0);
+    /* box-shadow: 0px 2px 15px rgb(255, 98, 0); */
+    /* rgba(0, 0, 0, 0.501) */
+    cursor: pointer ;
+}
+
+.main-choice:hover {
+    box-shadow: 0px -10px 15px rgb(255, 98, 0) inset;
+    /* box-shadow: 0px -10px 3px rgb(255, 98, 0) inset; */
+
 
 }
 
 
 .fa-star , .fa-bars-staggered {
     font-size: 280px;
-    color: #193549;
+    /* color: #193549; */
+    color: rgb(255, 98, 0);
     margin-left: 5px;
     margin-top: 5px;
 }
@@ -63,6 +99,8 @@ main {
     position: relative;
     right: 0;
     color: #193549;
+    /* color: rgb(255, 98, 0); */
+    font-weight: bolder;
     width: fit-content;
     margin-left: 30%;
     /* border :1px solid black ; */
