@@ -5,6 +5,7 @@ const app = express()
 require('dotenv').config({path: './config/.env'})
 
 const mainRoute = require("./routes/main")
+const leaguesRoute = require("./routes/leagues")
 
 
 
@@ -15,6 +16,8 @@ app.use(express.json())
  
 
 app.use("/", mainRoute)
+app.use("/leagues", leaguesRoute)
+
 
 
 

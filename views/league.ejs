@@ -1,0 +1,71 @@
+<%- include('partials/header') -%>
+
+<header>
+    <nav class="nav nav-1">
+        <h1>HayaFooty</h1>
+        <!-- <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+        <a href="/login">Login</a>
+    </nav>
+    <nav class="nav nav-2">
+        <img src="" alt=""><h2></h2>
+    </nav>
+</header>
+
+
+
+
+
+<table class="group">
+    <tr class="group-title">
+        <th colspan="8" class="group-name"> <h3>Standing</h3>  </th>
+    </tr>
+    <tr class="column-definer">
+        <td>Team</td>
+        <td>GF</td>
+        <td>GA</td>
+        <td>GD</td>
+        <td>W</td>
+        <td>L</td>
+        <td>D</td>
+        <td>Pts</td>
+
+
+    </tr>
+      
+<% for(let i = 0 ; i < standing.length ; i++){ %>
+
+
+        
+
+        <tr>
+            <td class="crest-tla"><img class="team-crest" src="<%= standing[i].team.crest %>" alt=""><h4><%= standing[i].team.tla %></h4></td>
+            <td><%= standing[i].goalsFor %></td>
+            <td><%= standing[i].goalsAgainst %></td>
+            <td><%= standing[i].goalDifference %></td>
+            <td><%= standing[i].won %></td>
+            <td><%= standing[i].lost %></td>
+            <td><%= standing[i].draw %></td>
+            <td style="color: rgb(255, 98, 0);"><b><%= standing[i].points %></b></td>
+        </tr>
+
+      
+                   
+       
+
+   
+        
+       
+
+
+
+
+<% } %>
+
+</table>
+
+
+<%- include('partials/footer') -%>

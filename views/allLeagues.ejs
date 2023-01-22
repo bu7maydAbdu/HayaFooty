@@ -11,21 +11,23 @@
         <a href="/login">Login</a>
     </nav>
     <nav class="nav nav-2">
-        <h2>All leagues</h2>
+        <i class="fa-solid fa-bars-staggered" style="font-size: 25px;"></i> <h2>All leagues</h2>
     </nav>
 </header>
 
 
 <main class="all-leagues-options">
     <%  for(let i = 0 ; i < competitions.length ; i++){ %>
-      <a class="league-director" href="/leagues/<%= competitions[i].id %>">
+        <% if(competitions[i].name !== 'Copa Libertadores' && competitions[i].name !== 'Championship'){ %>
+
+            <a class="league-director" href="/leagues/<%= competitions[i].id %>">
          
-        <img class="league-logo" src="<%= competitions[i].emblem %>" alt="">
-          
-
-      </a>
-
-
+                <img class="league-logo" src="<%= competitions[i].emblem %>" alt="">
+                  
+        
+              </a> 
+       <%  }  %>
+   
     <% } %>
 </main>
 
