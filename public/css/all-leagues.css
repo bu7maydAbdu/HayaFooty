@@ -1,0 +1,21 @@
+
+.all-leagues-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.league-logo {
+height: 100px;
+}
+
+.league-director {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border-radius: 16px;
+    margin: 0 auto;
+}

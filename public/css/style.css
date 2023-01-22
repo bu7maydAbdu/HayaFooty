@@ -53,10 +53,17 @@ h1 {
 
 
 .nav-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     z-index: -1000;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501);
-
+    text-align: center;
+}
+.nav-2 h2 {
+    color: #193549;
+    height: fit-content;
 }
 
 main {

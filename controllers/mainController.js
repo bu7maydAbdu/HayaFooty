@@ -29,9 +29,15 @@ module.exports = {
       }, 
       getAllLeagues : async (req, res) => {
         try{
+                 const competitions = await axios.get(baseUrl,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
 
+           console.log(competitions.data.competitions)
 
-            res.render("allLeagues.ejs")
+            res.render("allLeagues.ejs" , {competitions : competitions.data.competitions})
 
         }catch(err){
             console.log(err)
