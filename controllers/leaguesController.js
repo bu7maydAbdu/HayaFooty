@@ -19,9 +19,9 @@ module.exports = {
                 }
             })
 
-            console.log(standing.data.standings[0].table)
+            console.log(standing.data)
 
-            res.render("league.ejs", {standing :standing.data.standings[0].table })
+            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data})
 
         }catch(err){
             console.log(err)

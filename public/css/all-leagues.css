@@ -12,6 +12,10 @@
 height: 100px;
 }
 
+.small-league-logo {
+    height: 95%;
+}
+
 .league-director {
     display: flex;
     justify-content: center;
