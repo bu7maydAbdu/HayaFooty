@@ -18,10 +18,23 @@ module.exports = {
                     "X-Auth-Token" : token
                 }
             })
+            const teamsData = await axios.get(`${baseUrl}/${req.params.id}/teams`,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
+
+             const fixures = await axios.get(`${baseUrl}/${req.params.id}/matches`,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
+
+            const currentMatchesSearch = await fixures.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
             console.log(standing.data)
 
-            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data})
+            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data , fixures : currentMatchesSearch})
 
         }catch(err){
             console.log(err)

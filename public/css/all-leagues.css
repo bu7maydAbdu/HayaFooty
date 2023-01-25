@@ -86,6 +86,99 @@ tr {
      height: 100px;
   }
 
+
+
+
+  /* match fixures styling  ==== must  be restyled */
+
+
+  
+.match-fixure {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #811538; */
+    width: 600px;
+    margin: 50px auto;
+    height: 80px;
+    font-family: 'Merienda', cursive;
+    border-radius: 16px;
+    background-color: papayawhip;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    cursor: pointer;
+}
+
+
+
+
+
+.fixure-crest {
+    width: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.team1 , .team2 {
+    display: flex;
+     height: 100% !important;
+     background-color: #811538;
+    /* border: 1px solid papayawhip; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+}
+.team1 {
+    border-radius: 16px 0 0 16px;
+}
+
+.team2 {
+    border-radius: 0 16px 16px 0;
+}
+.team1 h3  , .team2 h3 {
+    
+    color: papayawhip;
+     margin: 0 10px;
+}
+
+ .score {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+        /* margin: 0 50px; */
+    /* border: 1px solid purple; */
+    width: 100%;
+} 
+
+
+
+/* .vs {
+    margin: 0 50px;
+} */
+.score h3 {
+ 
+    margin: 0 2%;
+}
+
+.live-sign {
+    position: absolute;
+    background-color: #811538;
+    color: papayawhip;
+    top: 2px;
+    font-size: 16px;
+    animation-name: blinking;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+@keyframes blinking {
+    0% { background-color: #811538; }
+    50%  { background-color: papayawhip;  }
+    100%   { background-color: #811538; }   
+}
+
+
   
 
   @media all and (max-width : 858px) {

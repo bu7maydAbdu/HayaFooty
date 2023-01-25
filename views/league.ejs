@@ -69,4 +69,98 @@
 </table>
 
 
+
+<% for(let i=0; i < fixures.length; i++) {%>
+    <%  const time = new Date (fixures[i].utcDate)   %>
+<%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+
+
+<h3 class="match-time"><%= DateSt  %></h3>   
+        
+      <section class="match-fixure">
+           <section class="team1">
+            <h3><%= fixures[i].homeTeam.tla %>  </h3>
+            <img class="fixure-crest" src="<%= fixures[i].homeTeam.crest %>" alt="">
+           </section>
+                       
+           <section class="score">
+         <%   if (fixures[i].status === 'IN_PLAY') { %>
+                       
+               <h3 class="live-sign">.Live</h3>
+
+             <% } %>
+            <% if(fixures[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+                
+            <h3>
+                <%= fixures[i].score.extraTime.home  + fixures[i].score.regularTime.home  %> <br>
+                (<%= fixures[i].score.penalties.home %>) 
+           </h3>
+           <h3 class="vs">
+              VS
+           </h3>
+           <h3>
+            <%= fixures[i].score.extraTime.away + fixures[i].score.regularTime.away %> <br>
+           (<%= fixures[i].score.penalties.away %>)
+
+        </h3>
+                 
+           <% }else {%>
+          <% if (fixures[i].status === 'IN_PLAY') { %>
+                       
+            <h3>
+                <%= fixures[i].score.fullTime.home  %>
+           </h3>
+           <h3 class="vs">
+              VS
+           </h3>
+           <h3>
+            <%= fixures[i].score.fullTime.away  %>
+        </h3>
+
+         <% } else if(fixures[i].status   === "FINISHED"){ %>
+
+
+            <h3>
+                <%= fixures[i].score.fullTime.home  %>
+           </h3>
+           <h3 class="vs">
+              VS
+           </h3>
+           <h3>
+            <%= fixures[i].score.fullTime.away  %>
+        </h3>
+                        
+           <% } else{ %>
+
+            <h3>
+                 -
+             </h3>
+           <h3 class="vs">
+              VS
+           </h3>
+           <h3>
+            -
+        </h3>
+
+
+         <%  }  %>
+
+    <%} %>
+                 
+           </section>
+
+           <section class="team2">
+            <h3><%= fixures[i].awayTeam.tla %>  </h3>
+            <img class="fixure-crest" src="<%= fixures[i].awayTeam.crest %>" alt="">
+           </section>
+        
+      </section>
+
+
+
+
+<% } %> 
+
+
+
 <%- include('partials/footer') -%>
