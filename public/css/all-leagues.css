@@ -7,6 +7,11 @@
     gap: 10px;
 }
 
+.league-main {
+    display: flex;
+    align-items: flex-start;
+    /* background: #811538; */
+} 
 
 .league-logo {
 height: 100px;
@@ -88,6 +93,13 @@ tr {
 
 
 
+  .fixures {
+    /* background: white; */
+    width: 800px;
+    margin: 20px auto;
+  }
+
+
 
   /* match fixures styling  ==== must  be restyled */
 
@@ -103,8 +115,11 @@ tr {
     height: 80px;
     font-family: 'Merienda', cursive;
     border-radius: 16px;
-    background-color: papayawhip;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    /* background-color: papayawhip; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
+    box-shadow: 0px 2px 5px rgb(255, 98, 0);
+
+    /* background: white; */
     cursor: pointer;
 }
 
@@ -114,18 +129,22 @@ tr {
 
 .fixure-crest {
     width: 30px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin: 0 10px;
 }
 
 .team1 , .team2 {
     display: flex;
      height: 100% !important;
-     background-color: #811538;
+     /* background-color: #811538; */
     /* border: 1px solid papayawhip; */
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+    background: white;
+    /* background:rgb(255, 98, 0) ; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
+    box-shadow: 0px 2px 5px rgb(255, 98, 0);
+
 }
 .team1 {
     border-radius: 16px 0 0 16px;
@@ -136,7 +155,7 @@ tr {
 }
 .team1 h3  , .team2 h3 {
     
-    color: papayawhip;
+    /* color: papayawhip; */
      margin: 0 10px;
 }
 
@@ -147,6 +166,9 @@ tr {
         /* margin: 0 50px; */
     /* border: 1px solid purple; */
     width: 100%;
+    /* background: white; */
+    background:rgb(255, 98, 0) ;
+    color: white;
 } 
 
 
@@ -161,8 +183,8 @@ tr {
 
 .live-sign {
     position: absolute;
-    background-color: #811538;
-    color: papayawhip;
+    /* background-color: #811538; */
+    /* color: papayawhip; */
     top: 2px;
     font-size: 16px;
     animation-name: blinking;
