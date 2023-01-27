@@ -7,19 +7,31 @@
 }
 .fa-list-ol {
     font-size: 50px;
+
 }
 
 .league-choice {
+   position: relative;
    width: 800px;
    height: 100px;
    background: white;
    margin : 0 auto;
    display: flex;
+   justify-content: space-around;
+   align-items: center;
    text-align:  center;
+   font-size: 50px;
+   color: rgb(255, 98, 0);
 }
 .league-choice h3 {
+    
     /* background:  black; */
-    width: 100%;
+    width: fit-content;
+}
+.league-choice .fa-angles-down {
+    /* position: absolute;
+    right: 20px;
+justify-self: flex-end; */
 }
 .all-leagues-options {
     display: grid;
@@ -206,23 +218,27 @@ tr {
     margin: 0 2%;
 }
 
+
 .live-sign {
     position: absolute;
     /* background-color: #811538; */
     /* color: papayawhip; */
     top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
     font-size: 16px;
     animation-name: blinking;
-    animation-duration: 3s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     
 }
 
 @keyframes blinking {
-    0% { background-color: #811538; }
-    50%  { background-color: papayawhip;  }
-    100%   { background-color: #811538; }   
+    0% { background-color: rgb(255, 98, 0); }
+    50%  { background-color: white;  }
+    100%   { background-color: rgb(255, 98, 0); }   
 }
 
 
