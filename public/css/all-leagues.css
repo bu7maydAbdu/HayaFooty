@@ -1,6 +1,26 @@
 *{
     /* border: 1px solid black; */
 }
+
+.display-none {
+   display: none;
+}
+.fa-list-ol {
+    font-size: 50px;
+}
+
+.league-choice {
+   width: 800px;
+   height: 100px;
+   background: white;
+   margin : 0 auto;
+   display: flex;
+   text-align:  center;
+}
+.league-choice h3 {
+    /* background:  black; */
+    width: 100%;
+}
 .all-leagues-options {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -11,6 +31,7 @@
     display: flex;
     align-items: flex-start;
     /* background: #811538; */
+    flex-direction: column;
 } 
 
 .league-logo {
@@ -94,6 +115,7 @@ tr {
 
 
   .fixures {
+   
     /* background: white; */
     width: 800px;
     margin: 20px auto;
@@ -110,11 +132,11 @@ tr {
     display: flex;
     justify-content: space-between;
     /* border: 1px solid #811538; */
-    width: 600px;
+    width: 800px;
     margin: 50px auto;
     height: 80px;
-    font-family: 'Merienda', cursive;
-    border-radius: 16px;
+    /* font-family: 'Merienda', cursive; */
+    /* border-radius: 16px; */
     /* background-color: papayawhip; */
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
     box-shadow: 0px 2px 5px rgb(255, 98, 0);
@@ -143,15 +165,18 @@ tr {
     background: white;
     /* background:rgb(255, 98, 0) ; */
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
-    box-shadow: 0px 2px 5px rgb(255, 98, 0);
+    box-shadow: 0px 2px 5px rgb(255, 98, 0) !important;
 
 }
 .team1 {
-    border-radius: 16px 0 0 16px;
+    /* border-radius: 16px 0 0 16px; */
+    /* box-shadow: 10px 2px 5px rgb(255, 98, 0) !important; */
+
 }
 
 .team2 {
-    border-radius: 0 16px 16px 0;
+    /* border-radius: 0 16px 16px 0; */
+
 }
 .team1 h3  , .team2 h3 {
     
@@ -166,9 +191,9 @@ tr {
         /* margin: 0 50px; */
     /* border: 1px solid purple; */
     width: 100%;
-    /* background: white; */
-    background:rgb(255, 98, 0) ;
-    color: white;
+    background: white;
+    /* background:rgb(255, 98, 0) ; */
+    /* color: white; */
 } 
 
 
