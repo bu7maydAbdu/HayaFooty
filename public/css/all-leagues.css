@@ -4,6 +4,7 @@
 
 .display-none {
    display: none;
+   
 }
 .fa-list-ol {
     font-size: 50px;
@@ -15,13 +16,14 @@
    width: 800px;
    height: 100px;
    background: white;
-   margin : 0 auto;
+   margin : 10px auto;
    display: flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
    text-align:  center;
    font-size: 50px;
    color: rgb(255, 98, 0);
+   cursor: pointer;
 }
 .league-choice h3 {
     
@@ -32,6 +34,7 @@
     /* position: absolute;
     right: 20px;
 justify-self: flex-end; */
+color: #193549;
 }
 .all-leagues-options {
     display: grid;
@@ -80,7 +83,10 @@ height: 100px;
     width: 800px;
     background: white;
     margin: 20px auto;
+    /* transition: display 0.25s; */
+
 } 
+
 
 .group-name {
     width: 100%;
@@ -153,7 +159,7 @@ tr {
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
     box-shadow: 0px 2px 5px rgb(255, 98, 0);
 
-    /* background: white; */
+    background: white;
     cursor: pointer;
 }
 
@@ -171,10 +177,11 @@ tr {
     display: flex;
      height: 100% !important;
      /* background-color: #811538; */
-    /* border: 1px solid papayawhip; */
+    /* border: 1px solid rgb(255, 98, 0); */
     justify-content: center;
     align-items: center;
     background: white;
+    width: 100px;
     /* background:rgb(255, 98, 0) ; */
     /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
     box-shadow: 0px 2px 5px rgb(255, 98, 0) !important;
@@ -182,12 +189,14 @@ tr {
 }
 .team1 {
     /* border-radius: 16px 0 0 16px; */
-    /* box-shadow: 10px 2px 5px rgb(255, 98, 0) !important; */
+    /* border: 1px solid rgb(255, 98, 0); */
+
 
 }
 
 .team2 {
     /* border-radius: 0 16px 16px 0; */
+
 
 }
 .team1 h3  , .team2 h3 {
@@ -203,7 +212,7 @@ tr {
         /* margin: 0 50px; */
     /* border: 1px solid purple; */
     width: 100%;
-    background: white;
+    /* background: white; */
     /* background:rgb(255, 98, 0) ; */
     /* color: white; */
 } 
