@@ -6,6 +6,8 @@ const baseUrl = process.env.baseUrl
 const standingsUrl = `${baseUrl}/2000/standings`
 const teamsUrl = `${baseUrl}/teams`
 const matchesUrl = `${baseUrl}/matches`
+const scorersUrl = `${baseUrl}/scorers`
+
 
 module.exports = {
 
@@ -30,11 +32,18 @@ module.exports = {
                 }
             })
 
+            const topScorersData = await axios.get(`${baseUrl}/${req.params.id}/scorers`,{
+                headers: {
+                    "X-Auth-Token" : token
+                }
+            })
+        
+
             const currentMatchesSearch = await fixures.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
             console.log(standing.data)
 
-            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data , fixures : currentMatchesSearch})
+            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data , fixures : currentMatchesSearch, playersStats : topScorersData.data.scorers})
 
         }catch(err){
             console.log(err)

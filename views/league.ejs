@@ -168,6 +168,11 @@
                </section>
             
           </section>
+
+
+          
+
+       
     
     
     
@@ -176,6 +181,29 @@
     
     
     </section>
+
+
+    <section class="players-stats">
+
+        <% for(let i = 0 ; i < playersStats.length ; i++){ %>
+
+            <section class="player-section">
+        
+                <section class="player-inner-section">
+                    <h3 class="player-stat"><%= playersStats[i].player.name  %></h3>
+                    <h3 class="player-stat"><%= playersStats[i].goals %></h3>
+                </section>
+        
+        
+        
+            </section>
+        
+        
+        
+        
+        <%  }  %>
+
+      </section>
 
 </main>
 
