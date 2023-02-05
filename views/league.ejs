@@ -87,7 +87,7 @@
         <%  const time = new Date (fixures[i].utcDate)   %>
     <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
     
-    
+
     <!-- <h3 class="match-time"><%= DateSt  %></h3>    -->
             
           <section class="match-fixure">
@@ -101,7 +101,18 @@
                             <section class="live-sign"></section>
                    
     
-                 <% } %>
+                 <% } else if(fixures[i].status === 'FINISHED'){ %>
+                       
+                    <h3 class="match-time">FT</h3>   
+
+
+
+                    <% } else { %>
+            <h3 class="match-time"><%= DateSt + " - " + time.getUTCHours() + ":" + time.getUTCMinutes() %></h3>   
+
+
+                    <%  } %>
+
                 <% if(fixures[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
                     
                 <h3>
@@ -183,7 +194,16 @@
     </section>
 
 
-    <section class="players-stats">
+    <section class="league-choice players-stats-choice ">
+
+        <i class="fa-solid fa-angles-down carrets"></i> 
+        <h3><i class="fa-solid fa-user"></i>Players Stats</h3>
+        <i class="fa-solid fa-angles-down carrets"></i> 
+    
+    </section>
+
+
+    <section class="players-stats display-none">
 
         <% for(let i = 0 ; i < playersStats.length ; i++){ %>
 

@@ -227,12 +227,21 @@ tr {
     margin: 0 2%;
 }
 
+.match-time {
+    display: flex;
+    position: absolute;
+    /* background-color: #811538; */
+    /* color: papayawhip; */
+    top: 5px;
+    font-size: 14px;
+}
 
 .live-sign {
     position: absolute;
     /* background-color: #811538; */
     /* color: papayawhip; */
-    top: 2px;
+    border: 1px solid rgb(255, 98, 0);
+    top: 5px;
     border-radius: 50%;
     width: 15px;
     height: 15px;
@@ -240,8 +249,7 @@ tr {
     animation-name: blinking;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    
+    animation-timing-function: ease-in-out;    
 }
 
 @keyframes blinking {
