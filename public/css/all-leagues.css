@@ -252,6 +252,19 @@ tr {
     animation-timing-function: ease-in-out;    
 }
 
+
+.players-stats {
+    background: white;
+    width: 800px;
+    margin: 20px auto;
+}
+
+.player-inner-section {
+    display: flex;
+    padding: 20px 10px ;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgb(255, 98, 0) !important;
+}
 @keyframes blinking {
     0% { background-color: rgb(255, 98, 0); }
     50%  { background-color: white;  }
