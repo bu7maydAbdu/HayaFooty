@@ -1,0 +1,23 @@
+
+
+
+.login-section {
+    background: white;
+    width: 800px;
+   
+    margin: 0 auto;
+}
+
+.login-section form {
+
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    /* background: blue; */
+    border: 1px solid black;
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 70%;
+} 
