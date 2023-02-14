@@ -82,7 +82,8 @@ main {
     background-color: white;
     margin: 50px;
     border-radius: 16px;
-    box-shadow: 0px 10px 3px rgb(255, 98, 0);
+    box-shadow: 0px 10px 3px rgb(255, 98, 0) ;
+
     /* box-shadow: 0px 2px 15px rgb(255, 98, 0); */
     /* rgba(0, 0, 0, 0.501) */
     cursor: pointer ;

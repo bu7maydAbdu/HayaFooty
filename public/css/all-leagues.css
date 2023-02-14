@@ -3,6 +3,7 @@
 }
 
 .display-none {
+
    display: none;
    
 }
@@ -83,9 +84,11 @@ height: 100px;
     width: 800px;
     background: white;
     margin: 20px auto;
-    /* transition: display 0.25s; */
 
 } 
+
+
+
 
 
 .group-name {
@@ -137,6 +140,8 @@ tr {
     /* background: white; */
     width: 800px;
     margin: 20px auto;
+    transition: display 0.2s;
+
   }
 
 
@@ -257,7 +262,13 @@ tr {
     background: white;
     width: 800px;
     margin: 20px auto;
+
 }
+
+/* .group.display-none , .fixures.display-none , .players-stats.display-none {
+    transition: display 0.2s;
+
+} */
 
 .player-inner-section {
     display: flex;
