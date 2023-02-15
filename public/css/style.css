@@ -68,6 +68,26 @@ h1 {
     height: fit-content;
 }
 
+.sidebar-btn {
+    position: absolute;
+    left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #193549;
+     color: rgb(255, 98, 0) ;
+    width: 40px ;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.501)  !important;
+
+}
+.sidebar-btn:hover {
+    cursor: pointer;
+}
 main {
     display: flex;
     justify-content: center;
