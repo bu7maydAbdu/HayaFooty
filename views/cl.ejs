@@ -1,0 +1,239 @@
+<%- include('partials/header') -%>
+
+<!-- make it customized according to champions league format (!important) -->
+
+<header>
+    <nav class="nav nav-1">
+        <h1>HayaFooty</h1>
+        <!-- <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul> -->
+        <a href="/login">Login</a>
+    </nav>
+    <nav class="nav nav-2">
+        <section class="sidebar-btn">
+            <i class="fa-solid fa-bars"></i>
+        </section>
+        <img class="small-league-logo" src="<%= leagueData.competition.emblem %>" alt=""><h2><%= leagueData.competition.name  %></h2>
+    </nav>
+</header>
+
+
+
+<main class="league-main">
+
+  <section class="league-choice standing-choice">
+    <i class="fa-solid fa-angles-down carrets "></i> 
+    <h3><i class="fa-solid fa-list-ol"></i>Standing</h3>
+    <i class="fa-solid fa-angles-down carrets "></i> 
+ </section>
+<table class="group display-none">
+    <tr class="group-title">
+        <th colspan="8" class="group-name"> <h3>Standing</h3>  </th>
+    </tr>
+    <tr class="column-definer">
+        <td>Team</td>
+        <td>GF</td>
+        <td>GA</td>
+        <td>GD</td>
+        <td>W</td>
+        <td>L</td>
+        <td>D</td>
+        <td>Pts</td>
+
+
+    </tr>
+      
+<% for(let i = 0 ; i < standing.length ; i++){ %>
+
+
+        
+
+        <tr>
+            <td class="crest-tla"><img class="team-crest" src="<%= standing[i].team.crest %>" alt=""><h4><%= standing[i].team.tla %></h4></td>
+            <td><%= standing[i].goalsFor %></td>
+            <td><%= standing[i].goalsAgainst %></td>
+            <td><%= standing[i].goalDifference %></td>
+            <td><%= standing[i].won %></td>
+            <td><%= standing[i].lost %></td>
+            <td><%= standing[i].draw %></td>
+            <td style="color: rgb(255, 98, 0);"><b><%= standing[i].points %></b></td>
+        </tr>
+        
+
+      
+                   
+       
+
+   
+        
+       
+
+
+
+
+<% } %>
+
+</table>
+
+
+<section class="league-choice fixures-choice ">
+
+    <i class="fa-solid fa-angles-down carrets"></i> 
+    <h3><i class="fa-solid fa-tv"></i>Current Fixtures</h3>
+    <i class="fa-solid fa-angles-down carrets"></i> 
+
+</section>
+
+<section class="fixures display-none">
+    <% for(let i=0; i < fixures.length; i++) {%>
+        <%  const time = new Date (fixures[i].utcDate)   %>
+    <%  const DateSt =  time.getUTCDate() + " / " +( time.getUTCMonth() + 1)  + " / "  + time.getUTCFullYear()    %>
+    
+
+    <!-- <h3 class="match-time"><%= DateSt  %></h3>    -->
+            
+          <section class="match-fixure">
+               <section class="team1">
+                <h3><%= fixures[i].homeTeam.tla %>  </h3>
+                <img class="fixure-crest" src="<%= fixures[i].homeTeam.crest %>" alt="">
+               </section>
+                           
+               <section class="score">
+             <%   if (fixures[i].status === 'IN_PLAY') { %>
+                            <section class="live-sign"></section>
+                   
+    
+                 <% } else if(fixures[i].status === 'FINISHED'){ %>
+                       
+                    <h3 class="match-time">FT</h3>   
+
+
+
+                    <% } else { %>
+            <h3 class="match-time"><%= DateSt + " - " + time.getUTCHours() + ":" + time.getUTCMinutes() %></h3>   
+
+
+                    <%  } %>
+
+                <% if(fixures[i].score.duration === 'PENALTY_SHOOTOUT'){ %>
+                    
+                <h3>
+                    <%= fixures[i].score.extraTime.home  + fixures[i].score.regularTime.home  %> <br>
+                    (<%= fixures[i].score.penalties.home %>) 
+               </h3>
+               <h3 class="vs">
+                  VS
+               </h3>
+               <h3>
+                <%= fixures[i].score.extraTime.away + fixures[i].score.regularTime.away %> <br>
+               (<%= fixures[i].score.penalties.away %>)
+    
+            </h3>
+                     
+               <% }else {%>
+              <% if (fixures[i].status === 'IN_PLAY') { %>
+                           
+                <h3>
+                    <%= fixures[i].score.fullTime.home  %>
+               </h3>
+               <h3 class="vs">
+                  VS
+               </h3>
+               <h3>
+                <%= fixures[i].score.fullTime.away  %>
+            </h3>
+    
+             <% } else if(fixures[i].status   === "FINISHED"){ %>
+    
+    
+                <h3>
+                    <%= fixures[i].score.fullTime.home  %>
+               </h3>
+               <h3 class="vs">
+                  VS
+               </h3>
+               <h3>
+                <%= fixures[i].score.fullTime.away  %>
+            </h3>
+                            
+               <% } else{ %>
+    
+                <h3>
+                     -
+                 </h3>
+               <h3 class="vs">
+                  VS
+               </h3>
+               <h3>
+                -
+            </h3>
+    
+    
+             <%  }  %>
+    
+        <%} %>
+                     
+               </section>
+    
+               <section class="team2">
+                <h3><%= fixures[i].awayTeam.tla %>  </h3>
+                <img class="fixure-crest" src="<%= fixures[i].awayTeam.crest %>" alt="">
+               </section>
+            
+          </section>
+
+
+          
+
+       
+    
+    
+    
+    
+    <% } %> 
+    
+    
+    </section>
+
+
+    <section class="league-choice players-stats-choice ">
+
+        <i class="fa-solid fa-angles-down carrets"></i> 
+        <h3><i class="fa-solid fa-user"></i>Players Stats</h3>
+        <i class="fa-solid fa-angles-down carrets"></i> 
+    
+    </section>
+
+
+    <section class="players-stats display-none">
+        <section class="stats-title-section">
+            <h3>Top Scorers</h3>
+        </section>
+
+        <% for(let i = 0 ; i < playersStats.length ; i++){ %>
+
+            <section class="player-section">
+        
+                <section class="player-inner-section">
+                    <h3 class="player-stat"><%= playersStats[i].player.name  %></h3>
+                    <h3 class="player-stat"><%= playersStats[i].goals %></h3>
+                </section>
+        
+        
+        
+            </section>
+        
+        
+        
+        
+        <%  }  %>
+
+      </section>
+
+</main>
+
+
+<%- include('partials/footer') -%>

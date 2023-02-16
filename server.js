@@ -15,6 +15,28 @@ app.use(express.urlencoded({extended : true}))
 app.use(express.json())
  
 
+
+
+// Sessions
+// app.use(
+//     session({
+//       secret: 'keyboard cat',
+//       resave: false,
+//       saveUninitialized: false,
+//       store: MongoStore.create({mongoUrl:process.env.DB_STRING})
+//     })
+//   )
+  
+
+
+// Passport middleware
+// app.use(passport.initialize())
+// app.use(passport.session())
+
+// app.use(flash())
+
+
+
 app.use("/", mainRoute)
 app.use("/leagues", leaguesRoute)
 
