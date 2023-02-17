@@ -71,3 +71,28 @@ function displayPlayersStats(){
 
     })
 }
+
+
+
+
+// sidebar section 
+
+
+const sidebarBtn = document.querySelector(".fa-bars")
+console.log(sidebarBtn)
+function toggleSideBar(){
+  const sidebar = document.querySelector(".sidebar")
+  console.log("hi")
+    sidebar.classList.toggle("open-active")
+}
+
+sidebarBtn.addEventListener("click",toggleSideBar)
+
+
+
+// function toggleActive(e){
+//   console.log(e.propertyName)
+//   if(e.propertyName.includes("flex")){
+//     this.classList.toggle("open-active")
+//   }
+// }
