@@ -10,11 +10,7 @@ const playersStats = document.querySelector(".players-stats")
 
 
 // console.log(carrets)
-    
-
-standingChoice.addEventListener("click", toggleDisplay)
-
-function toggleDisplay(){
+    function toggleDisplay(){
    
     standings.classList.toggle("display-none")
     // console.log(this)
@@ -31,8 +27,15 @@ function toggleDisplay(){
 
 
 }
+if(standingChoice){
+standingChoice.addEventListener("click", toggleDisplay)
+}
 
+
+if(fixuturesChoice){
 fixuturesChoice.addEventListener("click", displayFixtures )
+
+}
 
 
 function displayFixtures (){
@@ -54,7 +57,11 @@ function displayFixtures (){
 
 }
 
+
+
+if(playersStatsChoice){
 playersStatsChoice.addEventListener("click", displayPlayersStats )
+}
 
 
 
@@ -78,16 +85,29 @@ function displayPlayersStats(){
 // sidebar section 
 
 
+const sidebar = document.querySelector(".sidebar")
+
 const sidebarBtn = document.querySelector(".fa-bars")
-console.log(sidebarBtn)
-function toggleSideBar(){
-  const sidebar = document.querySelector(".sidebar")
+
+
+sidebarBtn.addEventListener("click",()=>{
   console.log("hi")
+})
+
+
+console.log(sidebarBtn)
+
+
+function toggleSideBar(){
+  console.log(sidebar)
+  console.log("hi")
+  if(sidebar){
     sidebar.classList.toggle("open-active")
+
+  }else {
+    console.log("not reached")
+  }
 }
-
-sidebarBtn.addEventListener("click",toggleSideBar)
-
 
 
 // function toggleActive(e){
