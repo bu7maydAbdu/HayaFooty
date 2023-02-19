@@ -89,10 +89,12 @@ const sidebar = document.querySelector(".sidebar")
 
 const sidebarBtn = document.querySelector(".fa-bars")
 
+if(sidebarBtn){
+  sidebarBtn.addEventListener("click",toggleSideBar)
+}else {
+  console.log("btn not working")
+}
 
-sidebarBtn.addEventListener("click",()=>{
-  console.log("hi")
-})
 
 
 console.log(sidebarBtn)
