@@ -90,6 +90,7 @@ function displayPlayersStats(){
 
 
 if(sidebarButton){
+  console.log(sidebarButton)
   sidebarButton.addEventListener("click",toggleSideBar)
 }else {
   console.log("btn not working")
@@ -97,7 +98,6 @@ if(sidebarButton){
 
 
 
-console.log(sidebarButton)
 
 
 function toggleSideBar(){
