@@ -1,4 +1,27 @@
-<%- include('partials/header') -%>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HayaFooty</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+
+      
+      href="/imgs/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- <link rel="stylesheet" href="/css/all-leagues.css"> -->
+   <link rel="stylesheet" href="/css/login.css">
+   <link rel="stylesheet" href="/css/cl.css">
+
+  </head>
+  <body>
 
 <!-- make it customized according to champions league format (!important) -->
 
@@ -29,54 +52,64 @@
     <h3><i class="fa-solid fa-list-ol"></i>Standing</h3>
     <i class="fa-solid fa-angles-down carrets "></i> 
  </section>
-<table class="group display-none">
-    <tr class="group-title">
-        <th colspan="8" class="group-name"> <h3>Standing</h3>  </th>
-    </tr>
-    <tr class="column-definer">
-        <td>Team</td>
-        <td>GF</td>
-        <td>GA</td>
-        <td>GD</td>
-        <td>W</td>
-        <td>L</td>
-        <td>D</td>
-        <td>Pts</td>
+
+<section class="all-tables">
+
+    <% for(let i = 0 ; i < standing.length ; i++){ %>
 
 
-    </tr>
-      
-<% for(let i = 0 ; i < standing.length ; i++){ %>
-
-
+        <table class="group display-none">
+            <tr class="group-title">
+                <th colspan="8" class="group-name"> <h3>Standing</h3>  </th>
+            </tr>
+            <tr class="column-definer">
+                <td>Team</td>
+                <td>GF</td>
+                <td>GA</td>
+                <td>GD</td>
+                <td>W</td>
+                <td>L</td>
+                <td>D</td>
+                <td>Pts</td>
         
-
-        <tr>
-            <td class="crest-tla"><img class="team-crest" src="<%= standing[i].team.crest %>" alt=""><h4><%= standing[i].team.tla %></h4></td>
-            <td><%= standing[i].goalsFor %></td>
-            <td><%= standing[i].goalsAgainst %></td>
-            <td><%= standing[i].goalDifference %></td>
-            <td><%= standing[i].won %></td>
-            <td><%= standing[i].lost %></td>
-            <td><%= standing[i].draw %></td>
-            <td style="color: rgb(255, 98, 0);"><b><%= standing[i].points %></b></td>
-        </tr>
         
-
-      
-                   
+            </tr>
+    
+    
+            <% for(let j = 0 ; j < standing[i].table.length ; j++){ %>
+    
+                <tr>
+                    <td class="crest-tla"><img class="team-crest" src="<%= standing[i].table[j].team.crest %>" alt=""><h4><%= standing[i].table[j].team.tla %></h4></td>
+                    <td><%= standing[i].table[j].goalsFor %></td>
+                    <td><%= standing[i].table[j].goalsAgainst %></td>
+                    <td><%= standing[i].table[j].goalDifference %></td>
+                    <td><%= standing[i].table[j].won %></td>
+                    <td><%= standing[i].table[j].lost %></td>
+                    <td><%= standing[i].table[j].draw %></td>
+                    <td style="color: rgb(255, 98, 0);"><b><%= standing[i].table[j].points %></b></td>
+                </tr>
+        
+                <% } %>
+    
+    
+          
+                       
+           
+    
        
+            
+           
+    
+    
+        </table>
+    
+    
+    <% } %>
 
-   
-        
-       
+</section>
 
 
 
-
-<% } %>
-
-</table>
 
 
 <section class="league-choice fixures-choice ">

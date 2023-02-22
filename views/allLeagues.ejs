@@ -21,7 +21,7 @@
 
 <main class="all-leagues-options">
     <%  for(let i = 0 ; i < competitions.length ; i++){ %>
-        <% if(competitions[i].name !== 'Copa Libertadores' && competitions[i].name !== 'Championship'){ %>
+        <% if(competitions[i].name !== 'Copa Libertadores' && competitions[i].name !== 'Championship' && competitions[i].name !== 'UEFA Champions League'){ %>
 
             <a class="league-director" href="/leagues/<%= competitions[i].id %>">
          
@@ -30,6 +30,16 @@
         
               </a> 
        <%  }  %>
+
+       <% if(competitions[i].name === 'UEFA Champions League'){ %>
+
+        <a class="league-director" href="/<%= competitions[i].id %>">
+     
+            <img class="league-logo" src="<%= competitions[i].emblem %>" alt="">
+              
+    
+          </a> 
+   <%  }  %>
    
     <% } %>
 </main>
