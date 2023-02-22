@@ -7,7 +7,6 @@ const fixtures = document.querySelector(".fixures")
 const carrets = document.querySelectorAll(".carrets")
 const playersStatsChoice = document.querySelector(".players-stats-choice")
 const playersStats = document.querySelector(".players-stats")
-const sidebarButton =  document.querySelector(".fa-bars")
 
 
 
@@ -86,15 +85,25 @@ function displayPlayersStats(){
 
 // sidebar section 
 
+const sideBarOpener = async ()=>{
+  const sidebarButton = await document.querySelector(".fa-bars")
 
+ 
+    sidebarButton.addEventListener("mousemove",()=>{
+    
+    if(sidebarButton){
+      console.log(sidebarButton)
+  }else {
+    console.log("btn not working")
+  }
 
-
-if(sidebarButton){
-  console.log(sidebarButton)
-  sidebarButton.addEventListener("click",toggleSideBar)
-}else {
-  console.log("btn not working")
+})
 }
+
+sideBarOpener()
+
+
+
 
 
 
