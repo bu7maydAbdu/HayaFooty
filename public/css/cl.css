@@ -1,12 +1,12 @@
-body {
+/* body {
     background: url("https://th.bing.com/th/id/R.0a6082edf92988dce10d194e0d2f58d9?rik=beg3xr4q1AMBZA&pid=ImgRaw&r=0") !important;
     height: 100%;
     width: 100%;
-    /* background-position: center; */
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     
-}
+} */
 .all-tables {
     display: flex;
     flex-direction: column;
