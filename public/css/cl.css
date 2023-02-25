@@ -10,7 +10,7 @@
 .all-tables {
     display: flex;
     flex-direction: column;
-    background: green;
+    /* background: green; */
     margin: 0 auto;
     height: fit-content !important;
 }
