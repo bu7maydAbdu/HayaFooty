@@ -1,7 +1,7 @@
 
 
 const standingChoice = document.querySelector(".standing-choice")
-const standings = document.querySelector(".group")
+const standings = document.querySelectorAll(".group")
 const fixuturesChoice = document.querySelector(".fixures-choice")
 const fixtures = document.querySelector(".fixures")
 const carrets = document.querySelectorAll(".carrets")
@@ -12,8 +12,13 @@ const playersStats = document.querySelector(".players-stats")
 
 // console.log(carrets)
     function toggleDisplay(){
-   
-    standings.classList.toggle("display-none")
+      standings.forEach(standing => {
+        // console.log(carret)
+        standing.classList.toggle("display-none")
+
+
+    })
+
     // console.log(this)
     const thisCarret = this.querySelectorAll(".carrets")
 

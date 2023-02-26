@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="/css/style.css" />
-    <!-- <link rel="stylesheet" href="/css/all-leagues.css"> -->
+    <link rel="stylesheet" href="/css/all-leagues.css">
    <link rel="stylesheet" href="/css/login.css">
    <link rel="stylesheet" href="/css/cl.css">
 
@@ -57,10 +57,10 @@
 
     <% for(let i = 0 ; i < standing.length ; i++){ %>
 
-
+        <% const groupName = standing[i].group.replace("_", " ") %>
         <table class="group display-none">
             <tr class="group-title">
-                <th colspan="8" class="group-name"> <h3>Standing</h3>  </th>
+                <th colspan="8" class="group-name"> <h3><%= groupName %></h3>  </th>
             </tr>
             <tr class="column-definer">
                 <td>Team</td>
@@ -86,7 +86,7 @@
                     <td><%= standing[i].table[j].won %></td>
                     <td><%= standing[i].table[j].lost %></td>
                     <td><%= standing[i].table[j].draw %></td>
-                    <td style="color: rgb(255, 98, 0);"><b><%= standing[i].table[j].points %></b></td>
+                    <td style="color: rgb(0, 214, 214);"><b><%= standing[i].table[j].points %></b></td>
                 </tr>
         
                 <% } %>
