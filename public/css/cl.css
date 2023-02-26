@@ -1,5 +1,5 @@
 /* body {
-    background: url("https://th.bing.com/th/id/R.0a6082edf92988dce10d194e0d2f58d9?rik=beg3xr4q1AMBZA&pid=ImgRaw&r=0") !important;
+    background: url("https://w7.pngwing.com/pngs/736/839/png-transparent-2013-14-uefa-champions-league-2014-15-uefa-champions-league-2014-uefa-champions-league-final-uefa-women-s-champions-league-paris-saint-germain-f-c-football-thumbnail.png") !important;
     height: 100%;
     width: 100%;
     background-position: center;
@@ -7,13 +7,52 @@
     background-size: cover;
     
 } */
-/* h1 {
-    color: cy;
-} */
+body {
+    background: #022843;
+    /* background: linear-gradient(#022843, cyan); */
+   /* background:  radial-gradient(circle,   #022843 0%,  rgb(20, 197, 197) 100%); */
+   /* background: linear-gradient(270deg, #022843, #00f3f3); */
+    /* background-size: 400% 400%; */
+  /* background-image: url("https://toppng.com/uploads/preview/uefa-champions-league-football-ball-stars-11562982790rnz67yryzj.png"); */
+    /* -webkit-animation: AnimationName 8s ease infinite;
+    -moz-animation: AnimationName 8s ease infinite;
+    animation: AnimationName 8s ease infinite; */
+} 
+
+.league-choice {
+    background:  radial-gradient(circle,   #022843 0%,  rgb(20, 197, 197) 100%);
+   /* background: linear-gradient(270deg, #022843, #00f3f3); */
+   background-size: 400% 400%;
+   /* background-image: url("https://toppng.com/uploads/preview/uefa-champions-league-football-ball-stars-11562982790rnz67yryzj.png"); */
+     -webkit-animation: AnimationName 8s ease infinite;
+     -moz-animation: AnimationName 8s ease infinite;
+     animation: AnimationName 8s ease infinite;
+     color: cyan;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+h1 {
+    color: #022843;
+}
 .nav-1 {
     box-shadow: 0px 2px 3px cyan;
 
 }
+
 .all-tables {
     display: flex;
     flex-direction: column;
@@ -24,7 +63,12 @@
 
 
 .group-name {
-    background: rgb(0, 227, 227) !important;
+    /* background: rgb(0, 227, 227) !important; */
+    background: #022843  !important;
+   /* background:  radial-gradient(circle,   #022843   0%, rgb(20, 197, 197)  100%) !important; */
+   box-shadow: 0px 2px 3px rgb(20, 197, 197);
+
+
 }
 
 
@@ -37,7 +81,12 @@
 
     text-align: center;
     width: 800px;
-    background: white;
+    /* background: white; */
+   /* background:  radial-gradient(circle,  rgba(20, 197, 197, 0.444)   0%,   #0228436d 100%); */
+   background:  radial-gradient(circle,  rgba(20, 197, 197, 0.37)   0%,   #02284398 100%);
+
+   /* box-shadow: 0px 2px 5px rgb(20, 197, 197); */
+
     margin: 20px auto;
 
 } 
@@ -89,4 +138,48 @@ tr {
   }
   .team-crest {
     height: 40px;
+}
+
+
+.match-fixure {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #811538; */
+    width: 800px;
+    margin: 50px auto;
+    height: 80px;
+    /* font-family: 'Merienda', cursive; */
+    /* border-radius: 16px; */
+    /* background-color: papayawhip; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
+    box-shadow: 0px 2px 5px cyan;
+
+    background: white;
+    cursor: pointer;
+}
+
+
+
+
+
+.fixure-crest {
+    width: 30px;
+    /* border-radius: 50%; */
+    margin: 0 10px;
+}
+
+.team1 , .team2 {
+    display: flex;
+     height: 100% !important;
+     /* background-color: #811538; */
+    /* border: 1px solid rgb(255, 98, 0); */
+    justify-content: center;
+    align-items: center;
+    background: white;
+    width: 100px;
+    /* background:rgb(255, 98, 0) ; */
+    /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.501)  !important; */
+    box-shadow: 0px 2px 5px cyan !important;
+
 }
