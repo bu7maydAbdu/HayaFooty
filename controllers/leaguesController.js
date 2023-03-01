@@ -76,14 +76,16 @@ module.exports = {
             })
         
 
-            const currentMatchesSearch = await fixures.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
+            
+            const currentMatchesSearch = await fixures.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday  )
                 // for(let i =0 ; i < standing.data.standings[i].table.length ; i++){
                 //     console.table(standing.data.standings[i].table)
                 // }
             // console.log(standing.data.standings[0].table)
             // console.log(standing.data.standings)
-            console.log(fixures.data.matches)
-
+            // console.log(fixures.data.matches)
+            console.log(currentMatchesSearch)
+            // teamsData.data.season.currentMatchday
        res.render("cl.ejs" , {standing :standing.data.standings, leagueData : standing.data , fixures : currentMatchesSearch, playersStats : topScorersData.data.scorers})
 
         }catch(err){
