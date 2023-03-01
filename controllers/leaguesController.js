@@ -81,7 +81,8 @@ module.exports = {
                 //     console.table(standing.data.standings[i].table)
                 // }
             // console.log(standing.data.standings[0].table)
-            console.log(standing.data.standings)
+            // console.log(standing.data.standings)
+            console.log(fixures.data.matches)
 
        res.render("cl.ejs" , {standing :standing.data.standings, leagueData : standing.data , fixures : currentMatchesSearch, playersStats : topScorersData.data.scorers})
 
