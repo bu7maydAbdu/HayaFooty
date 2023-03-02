@@ -89,23 +89,20 @@ function displayPlayersStats(){
 
 
 // sidebar section 
-
-const sideBarOpener = async ()=>{
-  const sidebarButton = await document.querySelector(".fa-bars")
+const sidebarButton =  document.querySelector(".fa-bars")
 
  
-    sidebarButton.addEventListener("mousemove",()=>{
-    
-    if(sidebarButton){
-      console.log(sidebarButton)
-  }else {
-    console.log("btn not working")
-  }
+sidebarButton.addEventListener("click",()=>{
 
-})
+if(sidebarButton){
+  console.log(sidebarButton)
+}else {
+console.log("btn not working")
 }
 
-sideBarOpener()
+})
+
+// sideBarOpener()
 
 
 
@@ -115,16 +112,17 @@ sideBarOpener()
 
 
 function toggleSideBar(){
-  const sidebar = document.querySelector(".sidebar")
-  console.log(sidebar)
-  console.log("hi")
-  if(sidebar){
-    sidebar.classList.toggle("open-active")
+const sidebar = document.querySelector(".sidebar")
+console.log(sidebar)
+console.log("hi")
+if(sidebar){
+sidebar.classList.toggle("open-active")
 
-  }else {
-    console.log("not reached")
-  }
+}else {
+console.log("not reached")
 }
+}
+
 
 
 // function toggleActive(e){
