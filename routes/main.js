@@ -3,13 +3,17 @@ const router = express.Router()
 const mainController = require("../controllers/mainController")
 const accountController = require("../controllers/accountController")
 const leaguesController = require("../controllers/leaguesController")
+const authController = require("../controllers/auth.js")
+const { ensureAuth, ensureGuest } = require("../middleware/auth.js")
 
 
 
 router.get("/", mainController.getHome)
 router.get("/allLeagues", mainController.getAllLeagues)
-router.get("/login", accountController.getLogin)
+router.get("/loginPage", accountController.getLogin)
 router.get("/signUpPage", accountController.getSignUpPage)
+router.get("/signup", authController.getSignup)
+router.post("/signup", authController.postSignup)
 router.get("/:id" , leaguesController.getChampionsLeague )
 
 

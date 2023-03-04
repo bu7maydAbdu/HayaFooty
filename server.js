@@ -2,10 +2,19 @@ const express = require("express")
 const axios = require("axios")
 const PORT = 8000
 const app = express()
+const methodOverride = require("method-override")
+const flash = require('express-flash')
+const logger = require("morgan")
 require('dotenv').config({path: './config/.env'})
 
 const mainRoute = require("./routes/main")
 const leaguesRoute = require("./routes/leagues")
+const connectDB = require("./config/database")
+
+require('./config/passport')(passport)
+
+connectDB()
+
 
 
 
@@ -15,25 +24,30 @@ app.use(express.urlencoded({extended : true}))
 app.use(express.json())
  
 
+app.use(logger("dev"))
+
+
+//Use forms for put / delete
+app.use(methodOverride("_method"))
 
 
 // Sessions
-// app.use(
-//     session({
-//       secret: 'keyboard cat',
-//       resave: false,
-//       saveUninitialized: false,
-//       store: MongoStore.create({mongoUrl:process.env.DB_STRING})
-//     })
-//   )
+app.use(
+    session({
+      secret: 'keyboard cat',
+      resave: false,
+      saveUninitialized: false,
+      store: MongoStore.create({mongoUrl:process.env.DB_STRING})
+    })
+  )
   
 
 
 // Passport middleware
-// app.use(passport.initialize())
-// app.use(passport.session())
+app.use(passport.initialize())
+app.use(passport.session())
 
-// app.use(flash())
+app.use(flash())
 
 
 

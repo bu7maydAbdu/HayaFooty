@@ -20,6 +20,4 @@ track your favourite matches , results , scores , stats and leagues
     }
     // Challenge: update `substract` to use a callback function
     
-    function subtract() {
-        setCount(prevCount => prevCount - 1)
-    }
+   
