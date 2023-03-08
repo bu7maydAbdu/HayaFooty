@@ -5,7 +5,7 @@ const User = require("../models/User.js");
 module.exports = {
   getLogin : (req, res) => {
   if (req.user) {
-    return res.redirect("/feed")
+    return res.redirect("/")
   }
   res.render("login.ejs", {
     title: "Login",
@@ -29,7 +29,7 @@ postLogin : (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
-    return res.redirect("/login");
+    return res.redirect("/loginPage");
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
@@ -41,14 +41,14 @@ postLogin : (req, res, next) => {
     }
     if (!user) {
       req.flash("errors", info);
-      return res.redirect("/login");
+      return res.redirect("/loginPage");
     }
     req.logIn(user, (err) => {
       if (err) {
         return next(err);
       }
       req.flash("success", { msg: "Success! You are logged in." });
-      res.redirect(req.session.returnTo || "/feed");
+      res.redirect(req.session.returnTo || "/");
     });
   })(req, res, next);
 },
@@ -78,7 +78,7 @@ postSignup : (req, res, next) => {
 
   if (validationErrors.length) {
     req.flash("errors", validationErrors);
-    return res.redirect("../signup");
+    return res.redirect("/");
   }
   req.body.email = validator.normalizeEmail(req.body.email, {
     gmail_remove_dots: false,
@@ -100,7 +100,7 @@ postSignup : (req, res, next) => {
         req.flash("errors", {
           msg: "Account with that email address or username already exists.",
         });
-        return res.redirect("/signup");
+        return res.redirect("/signupPage");
       }
       user.save((err) => {
         if (err) {

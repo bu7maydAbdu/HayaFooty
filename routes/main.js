@@ -14,6 +14,7 @@ router.get("/loginPage", accountController.getLogin)
 router.get("/signUpPage", accountController.getSignUpPage)
 router.get("/signup", authController.getSignup)
 router.post("/signup", authController.postSignup)
+router.get("/logout", authController.logout);
 router.get("/:id" , leaguesController.getChampionsLeague )
 
 
