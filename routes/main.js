@@ -7,7 +7,10 @@ const authController = require("../controllers/auth.js")
 const { ensureAuth, ensureGuest } = require("../middleware/auth.js")
 
 
+const profileController = require("../controllers/profileController")
 
+
+router.get("/profile" , profileController.getProfile)
 router.get("/", mainController.getHome)
 router.get("/allLeagues", mainController.getAllLeagues)
 router.get("/loginPage", accountController.getLogin)

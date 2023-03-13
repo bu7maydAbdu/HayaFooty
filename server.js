@@ -12,6 +12,7 @@ require('dotenv').config({path: './config/.env'})
 
 const mainRoute = require("./routes/main")
 const leaguesRoute = require("./routes/leagues")
+const profileRoute = require("./routes/profile")
 const connectDB = require("./config/database")
 
 require('./config/passport')(passport)
@@ -61,6 +62,8 @@ app.use(flash())
 
 app.use("/", mainRoute)
 app.use("/leagues", leaguesRoute)
+// app.use("/profile", profileRoute)
+
 
 
 
