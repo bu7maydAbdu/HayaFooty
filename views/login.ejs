@@ -25,11 +25,25 @@
 <section class="login-section">
     <h2>login</h2>
 
-    <form action="POST">
+    <form action="/login" method="POST">
         <!-- <input type="text" placeholder="name"> -->
-        <input type="email" name="" id="" placeholder="email">
-        <input type="password" name="" id="" placeholder="password">
-
+        <!-- <input type="email" name="" id="" placeholder="email">
+        <input type="password" name="" id="" placeholder="password"> -->
+        <input
+        type="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+        name="email"
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        class="form-control"
+        id="exampleInputPassword1"
+        name="password"
+        placeholder="password"
+      />
         <section class="login-signup-btns">
             <a href=""><button>Login</button></a>
             <a href="/signUpPage">SignUp</a>
