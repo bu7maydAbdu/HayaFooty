@@ -22,7 +22,18 @@
 </aside>
 
 <main class="league-main">
+    <!-- competitions[i].id  -->
+    <form class="favorite-league"  action="/leagues/addToFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
 
+        <button type="submit" >
+            <i class="fa-regular fa-star" ></i>
+            Add to favorites
+    
+            <!-- <i class="fa-solid fa-star"></i> -->
+        </button>
+
+    </form>
+    
   <section class="league-choice standing-choice">
     <i class="fa-solid fa-angles-down carrets "></i> 
     <h3><i class="fa-solid fa-list-ol"></i>Standing</h3>

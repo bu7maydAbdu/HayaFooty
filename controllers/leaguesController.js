@@ -1,5 +1,6 @@
 const express =  require("express")
 const axios = require("axios")
+const ProfileSet = require("../models/ProfileSet")
 
 const token = process.env.token
 const baseUrl = process.env.baseUrl
@@ -37,13 +38,13 @@ module.exports = {
                     "X-Auth-Token" : token
                 }
             })
-        
+        console.log(req.params)
 
             const currentMatchesSearch = await fixures.data.matches.filter(item => item.matchday === teamsData.data.season.currentMatchday)
 
-            console.log(standing.data)
+            // console.log(standing.data)
 
-            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data , fixures : currentMatchesSearch, playersStats : topScorersData.data.scorers})
+            res.render("league.ejs", {standing :standing.data.standings[0].table, leagueData : standing.data , fixures : currentMatchesSearch, playersStats : topScorersData.data.scorers, params : req.params})
 
         }catch(err){
             console.log(err)
@@ -91,8 +92,51 @@ module.exports = {
         }catch(err){
             console.log(err)
         }
+    },
+    createFavoritesList : async (req, res) => {
+        try{
+            console.log(req.user)
+            console.log(req.body)
+
+            // const profile = await ProfileInfo.findOne({user : req.user._id})
+
+            await ProfileSet.create({
+                favoriteLeagues : [] ,
+                user : req.user._id
+                })
+                res.redirect("/allLeagues")
+      }catch(err){
+        console.log(err)
     }
 
+
+
+           },
+           addToFavorites : async (req, res) => {
+            try{
+                // const posts = await ProfileSet.find()
+                // await ProfileSet.pdate(
+                //     { _id: req.params.id },
+                //     {
+                //       $push: { favoriteLeagues : req.params.id},
+                //     }
+                //   );
+                await ProfileSet.updateOne(
+                    { "user": req.user.id },
+                    { "$push": { "favoriteLeagues": req.params.id } },
+                    function (err, raw) {
+                        if (err) return handleError(err);
+                        console.log('The raw response from Mongo was ', raw);
+                    }
+                 );
+                 
+                // work on the redirection  , it doesn't work 
+             res.redirect(`/leagues/${req.params.id}`)
+
+            }catch(err){
+                console.log(err)
+            }
+           }
 
 
 }

@@ -1,3 +1,12 @@
+body {
+    display: flex;
+}
+
+.main-profile {
+    display: block;
+    width: 80vw;
+    margin-top: 0 !important;
+}
 .profileOptions {
     background: white;
     height: 100vh;
@@ -17,4 +26,24 @@
      width: 90%  !important;
      height: 50px;
      cursor: pointer;
+}
+
+
+.create-favorite-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    border: 2px solid rgb(255, 98, 0);
+    height: 50px;
+    width: 300px;
+    padding: auto 0;
+    color: black;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.fa-folder-plus {
+    color: rgb(255, 98, 0);
 }
