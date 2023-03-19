@@ -121,6 +121,8 @@ module.exports = {
                 //       $push: { favoriteLeagues : req.params.id},
                 //     }
                 //   );
+
+                console.log(req.params)
                 await ProfileSet.updateOne(
                     { "user": req.user.id },
                     { "$push": { "favoriteLeagues": req.params.id } },
