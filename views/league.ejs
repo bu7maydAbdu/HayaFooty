@@ -23,16 +23,23 @@
 
 <main class="league-main">
     <!-- competitions[i].id  -->
+    <%  if(leagueIsIncluded){ %>
     <form class="favorite-league"  action="/leagues/addToFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
-
         <button type="submit" >
-            <i class="fa-regular fa-star" ></i>
-            Add to favorites
-    
-            <!-- <i class="fa-solid fa-star"></i> -->
+                 <i class="fa-solid fa-star" style="color: rgb(255, 98, 0) ;"></i>
+                 Remove to favorites
         </button>
-
     </form>
+    <% }else{ %>
+        <form class="favorite-league"  action="/leagues/addToFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
+            <button type="submit" >
+                    <i class="fa-regular fa-star"></i> 
+                    Add to favorites
+                <!-- <i class="fa-solid fa-star"></i> -->
+            </button>
+        </form>
+        <% }  %>    
+
     
   <section class="league-choice standing-choice">
     <i class="fa-solid fa-angles-down carrets "></i> 

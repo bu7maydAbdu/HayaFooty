@@ -46,6 +46,14 @@ module.exports = {
         (item) => item.matchday === teamsData.data.season.currentMatchday
       );
 
+      const profileSetDoc = await ProfileSet.findOne({
+        user: req.user.id,
+      }).lean();
+      console.log(profileSetDoc);
+      const leagueIsIncluded = profileSetDoc.favoriteLeagues.includes(
+        req.params.id
+      );
+
       // console.log(standing.data)
 
       res.render("league.ejs", {
@@ -54,6 +62,7 @@ module.exports = {
         fixures: currentMatchesSearch,
         playersStats: topScorersData.data.scorers,
         params: req.params,
+        leagueIsIncluded: leagueIsIncluded,
       });
     } catch (err) {
       console.log(err);

@@ -1,15 +1,13 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const profileSetSchema = new mongoose.Schema({
- 
-    favoriteLeagues:{
-       type : Array
-    },
-    user : {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User"
-    }
-    
-  });
+  favoriteLeagues: {
+    type: Array,
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
+});
 
-module.exports = mongoose.model("ProfileSet", profileSetSchema)
+module.exports = mongoose.model("ProfileSet", profileSetSchema);
