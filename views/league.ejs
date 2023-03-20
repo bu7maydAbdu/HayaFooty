@@ -24,7 +24,7 @@
 <main class="league-main">
     <!-- competitions[i].id  -->
     <%  if(leagueIsIncluded){ %>
-    <form class="favorite-league"  action="/leagues/addToFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
+    <form class="favorite-league"  action="/leagues/removeFromFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
         <button type="submit" >
                  <i class="fa-solid fa-star" style="color: rgb(255, 98, 0) ;"></i>
                  Remove to favorites

@@ -160,4 +160,20 @@ module.exports = {
       console.log(err);
     }
   },
+  removeFromFavorites: async (req, res) => {
+    try {
+      await ProfileSet.updateOne(
+        { user: req.user.id },
+        {
+          $pullAll: {
+            favoriteLeagues: [req.params.id],
+          },
+        }
+      );
+
+      res.redirect(`/leagues/${req.params.id}`);
+    } catch (err) {
+      console.log(err);
+    }
+  },
 };
