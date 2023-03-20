@@ -26,14 +26,14 @@
     <%  if(leagueIsIncluded){ %>
     <form class="favorite-league"  action="/leagues/removeFromFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
         <button type="submit" >
-                 <i class="fa-solid fa-star" style="color: rgb(255, 98, 0) ;"></i>
+                 <i class="fa-solid fa-star fav-star" style="color: rgb(255, 98, 0) ;"></i>
                  Remove to favorites
         </button>
     </form>
     <% }else{ %>
         <form class="favorite-league"  action="/leagues/addToFavorites/<%= params.id %>" method="POST" enctype="application/x-www-form-urlencoded">
             <button type="submit" >
-                    <i class="fa-regular fa-star"></i> 
+                    <i class="fa-regular fa-star fav-star"></i> 
                     Add to favorites
                 <!-- <i class="fa-solid fa-star"></i> -->
             </button>
