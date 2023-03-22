@@ -3,14 +3,14 @@ module.exports = {
     if (req.isAuthenticated()) {
       return next();
     } else {
-      res.redirect("/");
+      res.redirect("/loginPage");
     }
   },
   ensureGuest: function (req, res, next) {
     if (!req.isAuthenticated()) {
       return next();
     } else {
-      res.redirect("/signinPage");
+      res.redirect("/allLeagues");
     }
   },
 };

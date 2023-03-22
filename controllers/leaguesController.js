@@ -50,12 +50,12 @@ module.exports = {
         user: req.user.id,
       }).lean();
       console.log(profileSetDoc);
+
       const leagueIsIncluded = profileSetDoc.favoriteLeagues.includes(
         req.params.id
       );
 
       // console.log(standing.data)
-
       res.render("league.ejs", {
         standing: standing.data.standings[0].table,
         leagueData: standing.data,

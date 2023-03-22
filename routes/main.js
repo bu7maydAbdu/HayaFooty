@@ -10,7 +10,7 @@ const profileController = require("../controllers/profileController");
 
 router.get("/profile", profileController.getProfile);
 router.get("/", mainController.getHome);
-router.get("/allLeagues", mainController.getAllLeagues);
+router.get("/allLeagues", ensureAuth, mainController.getAllLeagues);
 router.get("/loginPage", accountController.getLogin);
 router.get("/signUpPage", accountController.getSignUpPage);
 router.get("/login", authController.getLogin);

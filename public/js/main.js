@@ -2,7 +2,7 @@ const standingChoice = document.querySelector(".standing-choice");
 const standings = document.querySelectorAll(".group");
 const fixuturesChoice = document.querySelector(".fixures-choice");
 const fixtures = document.querySelector(".fixures");
-const carrets = document.querySelectorAll(".carrets");
+// const carrets = document.querySelectorAll(".carrets");
 const playersStatsChoice = document.querySelector(".players-stats-choice");
 const playersStats = document.querySelector(".players-stats");
 
@@ -59,19 +59,7 @@ function displayPlayersStats() {
 }
 
 // sidebar section
-const sidebarButton = document.querySelector(".fa-bars");
-
-sidebarButton.addEventListener("click", () => {
-  if (sidebarButton) {
-    console.log(sidebarButton);
-  } else {
-    console.log("btn not working");
-  }
-});
-
-// sideBarOpener()
-
-function toggleSideBar() {
+document.querySelector(".sidebar-btn").addEventListener("click", () => {
   const sidebar = document.querySelector(".sidebar");
   console.log(sidebar);
   console.log("hi");
@@ -80,7 +68,13 @@ function toggleSideBar() {
   } else {
     console.log("not reached");
   }
-}
+});
+
+// sideBarOpener()
+
+// function toggleSideBar() {
+
+// }
 
 // function toggleActive(e){
 //   console.log(e.propertyName)
