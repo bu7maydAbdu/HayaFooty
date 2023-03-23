@@ -59,7 +59,7 @@ function displayPlayersStats() {
 }
 
 // sidebar section
-document.querySelector(".sidebar-btn").addEventListener("click", () => {
+document.querySelector(".fa-bars").addEventListener("click", () => {
   const sidebar = document.querySelector(".sidebar");
   console.log(sidebar);
   console.log("hi");
