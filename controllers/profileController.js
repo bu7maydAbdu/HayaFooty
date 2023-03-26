@@ -13,9 +13,23 @@ module.exports = {
     try {
       const profileSettings = await ProfileSet.findOne({ user: req.user.id });
       const favArr = profileSettings.favoriteLeagues;
-      for (let i = 0; i < favArr.length; i++) {}
+      let favArrStaged = [];
+      for (let i = 0; i < favArr.length; i++) {
+        const standing = await axios.get(`${baseUrl}/${favArr[i]}/standings`, {
+          headers: {
+            "X-Auth-Token": token,
+          },
+        });
+        favArrStaged.push(standing.data);
+        console.log(standing.data.standings[0].table[0]);
+      }
 
-      res.render("profile.ejs", { myProfileInfo: req.user });
+      console.log(favArrStaged);
+
+      res.render("profile.ejs", {
+        myProfileInfo: req.user,
+        MyFavLeagues: favArrStaged,
+      });
       console.log(req.user);
     } catch (err) {
       console.log(err);

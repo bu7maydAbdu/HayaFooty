@@ -1,18 +1,25 @@
 body {
     display: flex;
+    /* background: white; */
 }
 
 .main-profile {
+    position: relative;
     display: block;
-    width: 80vw;
+    width: 77vw;
     margin-top: 0 !important;
+    left: 20vw;
 }
 .profileOptions {
+    position: fixed;
     background: white;
     height: 100vh;
     width: 20vw;
     padding-left: 10px;
     padding-top: 10px;
+    /* background: #193549; */
+    /* color: white; */
+
 }
 .profileOptions button {
     /* width: 300px !important;
@@ -46,4 +53,64 @@ body {
 
 .fa-folder-plus {
     color: rgb(255, 98, 0);
+}
+
+.mayFavLeagues {
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr ;
+    gap: 10px;
+    /* background: green; */
+}
+
+.mayFavLeagues img {
+    height: 200px;
+    margin: 0 auto;
+}
+
+.league-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+    width: 300px;
+    /* background: #193549d8; */
+    margin: 10px auto;
+    color: white;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501);
+    border-radius: 16px;
+    background:  radial-gradient(circle,   #004f87 0%,  rgb(0, 118, 182) 100%);
+   /* background: linear-gradient(270deg, #022843, #00f3f3); */
+   background-size: 400% 400%;
+   /* background-image: url("https://toppng.com/uploads/preview/uefa-champions-league-football-ball-stars-11562982790rnz67yryzj.png"); */
+     -webkit-animation: AnimationName 8s ease infinite;
+     -moz-animation: AnimationName 8s ease infinite;
+     animation: AnimationName 8s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.league-card section {
+    /* border: 1px solid black; */
+    width: 100%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.501) inset;
+    border-radius: 0 0 16px 16px;
+
+}
+.league-card section p {
+    box-shadow: 0px 5px 5px rgb(255, 98, 0) !important;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin: 15px 0;
 }
