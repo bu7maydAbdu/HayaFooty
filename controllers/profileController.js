@@ -12,23 +12,35 @@ module.exports = {
   getProfile: async (req, res) => {
     try {
       const profileSettings = await ProfileSet.findOne({ user: req.user.id });
+
       const favArr = profileSettings.favoriteLeagues;
       let favArrStaged = [];
+      let favLeagueScorers = [];
       for (let i = 0; i < favArr.length; i++) {
         const standing = await axios.get(`${baseUrl}/${favArr[i]}/standings`, {
           headers: {
             "X-Auth-Token": token,
           },
         });
+        const topScorersData = await axios.get(
+          `${baseUrl}/${favArr[i]}/scorers`,
+          {
+            headers: {
+              "X-Auth-Token": token,
+            },
+          }
+        );
         favArrStaged.push(standing.data);
-        console.log(standing.data.standings[0].table[0]);
+        favLeagueScorers.push(topScorersData.data.scorers);
+        // console.log(standing.data.standings[0].table[0]);
       }
 
-      console.log(favArrStaged);
+      console.log(favLeagueScorers[0][0]);
 
       res.render("profile.ejs", {
         myProfileInfo: req.user,
         MyFavLeagues: favArrStaged,
+        topScorers: favLeagueScorers,
       });
       console.log(req.user);
     } catch (err) {

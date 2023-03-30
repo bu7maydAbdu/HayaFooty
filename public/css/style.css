@@ -200,6 +200,14 @@ main {
     cursor: pointer;
 }
 
+.fa-square-minus {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 35px;
+    color: rgb(255, 98, 0);
+}
+
 
 
 /* 
