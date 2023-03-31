@@ -70,6 +70,17 @@ document.querySelector(".fa-bars").addEventListener("click", () => {
   }
 });
 
+document.querySelector(".fa-square-minus").addEventListener("click", () => {
+  const sidebar = document.querySelector(".sidebar");
+  console.log(sidebar);
+  console.log("hi");
+  if (sidebar) {
+    sidebar.classList.toggle("open-active");
+  } else {
+    console.log("not reached");
+  }
+});
+
 // sideBarOpener()
 
 // function toggleSideBar() {

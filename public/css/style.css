@@ -206,6 +206,7 @@ main {
     top: 20px;
     font-size: 35px;
     color: rgb(255, 98, 0);
+    cursor: pointer;
 }
 
 
