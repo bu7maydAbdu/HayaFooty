@@ -22,6 +22,12 @@ Frontend:
 
 First download all the dependencies
 
-```JS
+```bash
 npm install
+```
+
+## Development:
+
+```bash
+npm run dev
 ```
