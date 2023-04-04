@@ -29,10 +29,12 @@ npm install
 ## Development:
 
 set up a (.env) file inside the (config) folder
-set up the database inside the (.env) string as folows:
+set up the database string, API token and baseUrl inside the (.env) string as folows:
 
 ```JS
-DB_STRING= <the string>
+DB_STRING = <the string>
+token = <token>
+baseUrl = "http://api.football-data.org/v4/competitions"
 ```
 
 ```bash
