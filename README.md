@@ -1,6 +1,9 @@
 # HayaFooty
 
 track your favourite matches , results , scores , stats and leagues
+
+##
+
 ![alt text](public/images/Screenshot%202023-04-05%20134727.jpg)
 
 # Tech stack
@@ -52,3 +55,9 @@ initialize a default ESlint configuration using the command below:
 ```bash
 npx eslint --lint
 ```
+
+# Optimizations
+
+- Add a favorites page
+- Add a push notification feature
+- Handle wrong paths requested from the users
