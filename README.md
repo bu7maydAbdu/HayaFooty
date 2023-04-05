@@ -1,6 +1,7 @@
 # HayaFooty
 
 track your favourite matches , results , scores , stats and leagues
+![alt text](public/images/Screenshot%202023-04-05%20134727.jpg)
 
 # Tech stack
 
@@ -44,4 +45,10 @@ to start the server run the below command:
 
 ```bash
 npm run dev
+```
+
+initialize a default ESlint configuration using the command below:
+
+```bash
+npx eslint --lint
 ```
