@@ -61,3 +61,4 @@ npx eslint --lint
 - Add a favorites page
 - Add a push notification feature
 - Handle wrong paths requested from the users
+- Integrate React.js
