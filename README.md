@@ -58,7 +58,7 @@ npx eslint --lint
 
 # Optimizations
 
-- Add a favorites page
+- Add a favorites page:(get leagues data and pull it in the favLeagues.ejs page)
 - Add a push notification feature
 - Handle wrong paths requested from the users
 - Integrate React.js
