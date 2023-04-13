@@ -36,7 +36,7 @@ set up a (.env) file inside the (config) folder
 
 ![alt text](public/images/Screenshot%202023-04-05%20130908.jpg)
 
-set up the database string, API token and baseUrl inside the (.env) string as folows:
+**set up the database string, API token and baseUrl inside the (.env) string as folows:**
 
 ```JS
 DB_STRING = <the string>
@@ -44,13 +44,13 @@ token = <token>
 baseUrl = "http://api.football-data.org/v4/competitions"
 ```
 
-to start the server run the below command:
+**to start the server run the below command:**
 
 ```bash
 npm run dev
 ```
 
-initialize a default ESlint configuration using the command below:
+**initialize a default ESlint configuration using the command below:**
 
 ```bash
 npx eslint --lint
