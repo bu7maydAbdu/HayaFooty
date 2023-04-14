@@ -32,7 +32,7 @@ npm install
 
 ## Development:
 
-set up a (.env) file inside the (config) folder
+**set up a (.env) file inside the (config) folder**
 
 ![alt text](public/images/Screenshot%202023-04-05%20130908.jpg)
 
