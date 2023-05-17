@@ -21,6 +21,29 @@ body {
     /* color: white; */
 
 }
+.profileOptions ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    color: black;
+    height: 200px;
+    list-style: none;
+}
+.profileOptions ul li {
+    list-style: none;
+    text-decoration: none;
+}
+.profileOptions ul li a, 
+.profileOptions ul li a:active,
+.profileOptions ul li a:focus  { 
+    text-decoration: none;
+    color: orangered;
+    font-size: 20px;
+    font-weight: bold;
+ }
+
 .profileOptions button {
     /* width: 300px !important;
      */
