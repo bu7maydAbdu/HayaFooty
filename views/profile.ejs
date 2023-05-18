@@ -29,22 +29,24 @@
     <h2><%= myProfileInfo.userName  %></h2>
     </section>
     <ul>  
+              <li><a href="/">Home</a></li>
               <li><a href="/allLeagues">All Leagues</a></li>
               <li><a href="/allLeagues">My Favorite Leagues</a></li>
-  
-              <li></li>
-          </ul>
+            </ul>
     <a href="/logout"><button>Logout</button></a>
 </aside>
 
 <main class="main-profile">
-      <form action="/leagues/createFavoritesList" method="POST" enctype="application/x-www-form-urlencoded">
+      <!-- <form action="/leagues/createFavoritesList" method="POST" enctype="application/x-www-form-urlencoded">
     <button type="submit" class="create-favorite-list" >
         <i class="fa-solid fa-folder-plus"></i>
     Create Favorite List
     </button>
-</form>
+</form> -->
+<h2>My Favorite Leagues</h2>
+
 <section class="mayFavLeagues">
+
          
 <% for(let i = 0 ; i < MyFavLeagues.length ; i++){ %>
 

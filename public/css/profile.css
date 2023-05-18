@@ -10,6 +10,11 @@ body {
     margin-top: 0 !important;
     left: 20vw;
 }
+
+.main-profile h2 {
+  text-align: center;
+  color: white;
+}
 .profileOptions {
     position: fixed;
     background: white;
