@@ -15,9 +15,5 @@ track your favourite matches , results , scores , stats and leagues
      * which you can then use to determine your new
      * value of state.
      */
-    function add() {
-        setCount(prevCount => prevCount + 1)
-    }
-    // Challenge: update `substract` to use a callback function
     
    
