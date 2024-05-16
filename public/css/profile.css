@@ -1,14 +1,28 @@
+*, *::before , *::after {
+    /* border: 2px solid white; */
+}
 body {
-    display: flex;
+    /* display: flex;
+    justify-content: space-between; */
     /* background: white; */
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+}
+
+main {
+    margin: 0;
+    margin-left: 300px ;
 }
 
 .main-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     display: block;
-    width: 77vw;
+    /* width: fit-content;  77vw */
     margin-top: 0 !important;
-    left: 20vw;
+    /* margin-left: 300px ; */
 }
 
 .main-profile h2 {
@@ -24,7 +38,7 @@ hr {
     position: fixed;
     background: white;
     height: 100vh;
-    width: 20vw;
+    width: 300px;
     padding: 10px 10px;
     /* padding-top: 10px; */
     /* background: #193549; */
@@ -156,4 +170,10 @@ align-items: center;
     font-weight: bold;
     padding: 10px 10px;
     margin: 15px 0;
+}
+
+@media all and (max-width: 1276px) {
+    .mayFavLeagues {
+        grid-template-columns: 1fr 1fr;
+    }
 }

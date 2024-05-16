@@ -33,37 +33,39 @@
               <hr>
               <li><a href="/allLeagues">All Leagues</a></li>
               <hr>
-              <li><a href="/allLeagues">My Favorite Leagues</a></li>
-              <hr>
+              <!-- <li><a href="/allLeagues">My Favorite Leagues</a></li>
+              <hr> -->
             </ul>
     <a class="logout-btn" href="/logout"><button>Logout</button></a>
 </aside>
 
-<main class="main-profile">
-      <!-- <form action="/leagues/createFavoritesList" method="POST" enctype="application/x-www-form-urlencoded">
-    <button type="submit" class="create-favorite-list" >
-        <i class="fa-solid fa-folder-plus"></i>
-    Create Favorite List
-    </button>
+<main>
+  <section class="main-profile">
+
+    <!-- <form action="/leagues/createFavoritesList" method="POST" enctype="application/x-www-form-urlencoded">
+  <button type="submit" class="create-favorite-list" >
+      <i class="fa-solid fa-folder-plus"></i>
+  Create Favorite List
+  </button>
 </form> -->
 <h2>My Favorite Leagues</h2>
 
 <section class="mayFavLeagues">
 
-         
+       
 <% for(let i = 0 ; i < MyFavLeagues.length ; i++){ %>
 
 <section class="league-card">
 <img src="<%= MyFavLeagues[i].competition.emblem%>" alt="">
 <section>
-  <p>Matchday : <%= MyFavLeagues[i].season.currentMatchday %></p>
-  <p>Top Team : <%= MyFavLeagues[i].standings[0].table[0].team.name %></p>
-  <p>Top Scorer : <%= topScorers[i][0].player.name %></p>
+<p>Matchday : <%= MyFavLeagues[i].season.currentMatchday %></p>
+<p>Top Team : <%= MyFavLeagues[i].standings[0].table[0].team.name %></p>
+<p>Top Scorer : <%= topScorers[i][0].player.name %></p>
 
 
 
 
-  <span></span>
+<span></span>
 </section>
 </section>
 
@@ -72,6 +74,10 @@
 <% } %>
 
 </section>
+
+
+
+  </section>
 </main>
 
 
